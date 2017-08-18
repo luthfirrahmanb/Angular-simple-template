@@ -1,20 +1,78 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo=">
+<div class="w3-bar">
+  <div class="navbar" style="color: #3fada8;">
+    <button md-button href="#about" pageScroll [pageScrollSpeed]="2000">About</button>
+    <button md-button href="#exp" pageScroll [pageScrollSpeed]="2000">Experience</button>
+    <button md-button href="#skill" pageScroll [pageScrollSpeed]="2000">Skill</button>
+  </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://blog.angular.io//">Angular blog</a></h2>
-  </li>
-</ul>
 
+<div class="grad1">
+
+</div>
+
+<h5 class="quotes w3-animate-top">
+  <q>
+    <i>
+      If you always say i can't do that, <br>change it to how can i do that
+    </i>
+  </q>
+</h5>
+
+
+<div align="center">
+  <h1 id="about">About</h1>
+  <div class="aboutBox">
+    <div>
+      <img class="img" src="../assets/images/kylo.png">
+    </div>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+    text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+    with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+  </div>
+  <br>
+</div>
+
+<!--
+  You can edit on app.component.ts
+-->
+<div style="background-color:#66b9bf;">
+  <h1 id="exp" align="center">Experience</h1>
+  <div class="item" *ngFor="let work of works">
+    <div class="image">
+      <div>
+        <img src="{{work.photo}}" />
+      </div>
+    </div>
+    <div class="details">
+      <div>
+        <h1> <span style="color:#0066ff">{{work.name}}</span> <span style="color:black">as</span> <span style="color:#0066ff">{{work.as}}</span></h1>
+        <h5>{{work.year}}</h5>
+        <p>{{work.responsibility}} </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div style="margin-bottom:2em;height:700px" align="center">
+  <h1 id="skill">Skill</h1>
+  <div>
+    <div style="display: block" style="height:30px;width:50%">
+      <canvas baseChart baseChart [labels]="labels" [data]="data" [chartType]="type" [options]="barChartOptions"></canvas>
+    </div>
+  </div>
+
+</div>
+
+
+<!--
+  Footer
+  You can edit edit href and icon class on app.component.ts
+-->
+<md-toolbar style="background-color:#35797e">
+  <div style="margin: auto">
+    <a *ngFor="let sm of socialMedia" href="{{sm.link}}" target="_blank" style="margin:10px;"><i class="{{sm.icon}}"></i></a>
+  </div>
+</md-toolbar>
